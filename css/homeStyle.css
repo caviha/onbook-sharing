@@ -2,7 +2,7 @@ body{
 	background-image: URL('./img/smalllogo.PNG');
 }
 #headImg {width:15%; height:10%;}
-.w3-button {background-color:PapayaWhip; color:white;
+.w3-button {background-color:maroon; color:white;
 	font-weight:bold;font-family:Courier;font-size:20px;
 	padding:10px;
 	}
