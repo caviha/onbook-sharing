@@ -1,26 +1,87 @@
 body{
-	background-image: URL('./img/smalllogo.PNG');
+	
 }
-#headImg {width:15%; height:10%;}
-.w3-button {background-color:maroon; color:white;
-	font-weight:bold;font-family:Courier;font-size:20px;
-	padding:10px;
-	}
-
-#welcome {float:right;color: Green;font-weight:bold;font-family:Courier;font-size:20px;}
+header{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    box-shadow: 0 0 25px black;
+    justify-content: flex-end;
+    
+}
+header *{
+    display: inline;
+}
+header li{
+    margin: 15px;
+}
+header ul li a{
+    font-size: 20px;
+    padding: 2px 13px;
+    text-transform: uppercase;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    cursor: ponter;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width:952px){
+    header ul li a{
+        font-size: 12px;
+    }
+}
+@media (max-width: 848px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        
+    }
+    nav ul li{
+        display: block;
+    }
+    header ul li a{
+        font-size: 15px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+#welcome {float:right;color: maroon;font-weight:bold;font-family:Courier;font-size:20px;}
 
 .welbox {background-color:rgba(0,128,128,0.5); color:brown;font-weight:bold;opacity:0.5; text-align:center;
-	margin-left: 35%;margin-top:10%;padding:20px; width:30%;height:20%;
+	margin-left: 35%;margin-top:10%;padding:20px; width:30%;height:10%;
     	}
 
-#title {color:green;font-weight:bold;}
+#title {color:maroon;font-weight:bold;}
 
-#main {text-align:center;}
+#main {text-align:center; max-height: 20%; position: relative; }
 
 /* Slideshow container */
 .slideshow-container {
+    right: 0;
+    left: 0;
+    max-width: 100%;
  margin-top:0;  position: relative;
-  background: #f1f1f1f1;
+  background: white;
 }
 
 /* Slides */
@@ -29,6 +90,7 @@ body{
   padding: 80px;
   text-align: center;
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -62,7 +124,8 @@ body{
 .dot-container {
   text-align: center;
   padding: 20px;
-  background: #ddd;
+  background: #fff;
+  bottom: 0;
 }
 
 /* The dots/bullets/indicators */
